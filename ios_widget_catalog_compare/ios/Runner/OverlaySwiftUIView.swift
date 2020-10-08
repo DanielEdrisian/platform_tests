@@ -37,6 +37,7 @@ struct OverlaySwiftUIView: View {
   }
   
   var body: some View {
-    controlDictionary[controller.controlKey]?.1 ?? AnyView(Text("Nothing Selected"))
+    (controlDictionary[controller.controlKey]?.1 ?? AnyView(Text("Nothing Selected")))
+      .frame(maxWidth: .infinity, maxHeight: .infinity).edgesIgnoringSafeArea(.all)
   }
 }
